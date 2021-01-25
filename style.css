@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+.left,
+.right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  z-index: -5;
+}
+
+.left {
+  background: #353857;
+}
+
+.right {
+  left: 50%;
+  background: #d3d9d0;
+}
+
+.left-strip,
+.right-strip {
+  position: absolute;
+  height: 100vh;
+  width: 1px;
+  background: white;
+  opacity: 0.5;
+}
+
+.left-strip {
+  left: 120px;
+}
+
+.right-strip {
+  right: 120px;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+.nav .logo,
+.nav .menu,
+.nav .categories,
+.nav .search,
+.nav .bag {
+  position: absolute;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.nav .logo {
+  left: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.nav .logo .reg {
+  font-size: 14px;
+  vertical-align: super;
+}
+
+.nav .menu {
+  left: 150px;
+  line-height: 1.2;
+  font-size: 20px;
+}
+
+.nav .search,
+.nav .bag {
+  background: white;
+  color: #353857;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.nav .search {
+  right: 180px;
+}
+
+.nav .bag {
+  right: 40px;
+}
+
+.nav .categories {
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 2px solid white;
+  border-radius: 50px;
+  background: white;
+  color: #353857;
+  font-weight: bold;
+}
+
+.nav .categories ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav .categories ul li {
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.media {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.media ul {
+  list-style: none;
+}
+
+.media ul li {
+  display: inline-block;
+  font-weight: bold;
+  padding-right: 35px;
+}
+
+.media ul li:nth-child(last) {
+  padding-right: 0;
+}
+
+.size {
+  position: absolute;
+  left: 150px;
+  bottom: 20px;
+}
+
+.size ul {
+  list-style: none;
+}
+
+.size ul span::after {
+  content: "";
+  border: 0.5px solid white;
+  opacity: 0.5;
+  width: 50px;
+  margin: 0 0 0 10px;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  display: inline-block;
+}
+
+.size ul li {
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 1.5;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.size ul li:hover {
+  background: white;
+  color: #353857;
+}
+
+.product-img {
+  width: 500px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: fly 4s ease-in-out infinite;
+          animation: fly 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translate(-50%, -46%);
+            transform: translate(-50%, -46%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -54%);
+            transform: translate(-50%, -54%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -46%);
+            transform: translate(-50%, -46%);
+  }
+}
+
+@keyframes fly {
+  0% {
+    -webkit-transform: translate(-50%, -46%);
+            transform: translate(-50%, -46%);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -54%);
+            transform: translate(-50%, -54%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -46%);
+            transform: translate(-50%, -46%);
+  }
+}
+
+.product-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.product-text .product-title {
+  font-size: 100px;
+}
+
+.product-text .product-title::after {
+  content: ".";
+  color: #353857;
+}
+
+.product-text .product-subtitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.dots {
+  position: absolute;
+  top: 43%;
+  right: -25px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.dots .dot {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  background: transparent;
+  border: 2px solid #353857;
+  border-radius: 50%;
+  margin: 0 18px;
+}
+
+.dots .dot:first-child {
+  background: #353857;
+  margin-left: 0;
+}
+
+.bottomnav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.bottomnav .bottomnav-img {
+  background: url("./assets/levi-shirt.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 250px;
+  height: 150px;
+}
+
+.bottomnav ul {
+  list-style: none;
+}
+
+.bottomnav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 20px 20px 20px 0;
+  background: #353857;
+  color: white;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.bottomnav ul li:hover {
+  background: white;
+  color: #353857;
+}
+/*# sourceMappingURL=style.css.map */
